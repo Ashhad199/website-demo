@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/6578fb1262.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main-container">
+
+        <!-- navbar portion -->
+
+        <nav class="navbar">
+            <div class="logo"><i class="fa-duotone fa-solid fa-spa fa-fade fa-xl"
+                    style="--fa-primary-color: #B197FC; --fa-secondary-color: #f2f2f2;"></i></div>
+            <ul>
+
+                <li><a href="#"><span>HOME</span></a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#">PAGES</a></li>
+                <li><a href="#">HELP</a></li>
+
+
+
+            </ul>
+            <div class="search-box">
+
+                <div class="search-box-1"><input type="text" placeholder="search"></div>
+                <div class="search-icon"><i class="fa-solid fa-magnifying-glass" style="color: #8f8f8f;"></i></div>
+            </div>
+
+            <div class="btn-nav" id="hamburger"><button onclick=toggleNav()>
+                    <i class="fa-solid fa-bars fa-lg" style="color: #3da443;"></i>
+
+                </button></div>
+                <div class="content" id="nav_mobile">
+                    <ul>
+        
+                        <li><a href="#"><span>HOME</span></a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                        <li><a href="#">PAGES</a></li>
+                        <li><a href="#">HELP</a></li>
+                    </ul>
+        
+                    <div class="search-box-after">
+                        <div class="search-box-1"><input type="text" placeholder="search"></div>
+                        <div class="search-icon"><i class="fa-solid fa-magnifying-glass" style="color: #8f8f8f;"></i></div>
+                    </div>
+        
+                </div>
+                
+        </nav>
+
+        <!-- content -->
+
+
+
+
+
+        <!-- hero porttion -->
+
+
+        <div class="flex-nav">
+            <div class="flex-container">
+                <div class="main-heading">
+                    <h1>THIS IS FOT PRACTICE</h1>
+                </div>
+
+                <div class="button-1">
+                    <button class='button-style'>First-Button</button>
+                    <button class='button-style'>Second-Button</button>
+                </div>
+
+                <div class="extra-info">This is some kind of description</div>
+
+            </div>
+        </div>
+
+        <!-- lower portion -->
+
+
+        <div class="grid-item-lowerpart"></div>
+    </div>
+
+
+    <div class="section">
+        <div class="image-3"></div>
+        <div class="article">
+            <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit cumque nemo quae laboriosam
+                fuga labore molestias fugit, vero dignissimos, nam rem, nulla voluptatem illo reiciendis tempora dolores
+                repudiandae? In, provident. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati
+                quas, consequatur nostrum officia, sed dolorem repellat quisquam exercitationem laboriosam commodi hic
+                aliquam et ex earum totam vero reprehenderit ab! Lorem ipsum dolor, sit lorem amet consectetur
+                adipisicing elit. Incidunt voluptatem fugiat vero aliquam id tempore iste non eveniet, excepturi in?
+            </div>
+            <div class="para-button"><button class='button-style'>AWESOME</button></div>
+        </div>
+    </div>
+
+    <!-- footer portion -->
+
+    <div class="footer" id="contact">
+        <div class="contact info"><i class="fa-solid fa-phone"></i> +92-3445-66004</div>
+        <div class="email info"><i class="fa-solid fa-envelope"></i> starthealth@yahoo.com</div>
+        <div class="Company Name info"><i class="fa-solid fa-globe"></i> Company-Name</div>
+        <div class="logo info"> <i class="fa-duotone fa-solid fa-spa fa-fade fa-xl"
+                style="--fa-primary-color: #B197FC; --fa-secondary-color: #f2f2f2;"></i></div>
+
+    </div>
+    <script>
+        let element = document.getElementById("nav_mobile");
+        let element1 = document.getElementById('hamburger')
+        const toggleNav = () => {
+            element.classList.toggle('d-none')
+        }
+        const handleDisplay = (e) => {
+            let eleExist = element.contains(e.target)
+            let ele2Exist = element1.contains(e.target)
+           if(!eleExist && !ele2Exist){
+            element.classList.add('d-none')
+           }
+        }
+        document.addEventListener('click', handleDisplay)
+    </script>
+</body>
+
+</html>
